@@ -79,8 +79,31 @@ h3{font-family:'Cinzel',serif;font-weight:600;letter-spacing:.08em;font-size:1.3
 .ft .script{font-size:3.6rem;color:var(--ac)}
 .pt{position:fixed;top:-30px;z-index:45;pointer-events:none;width:11px;height:14px;border-radius:70% 0 70% 0;background:#c99a7e;animation:fall linear infinite}
 @keyframes fall{to{transform:translate3d(var(--x),110vh,0) rotate(540deg)}}
-#mu{position:fixed;right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:55;width:48px;height:48px;border-radius:50%;border:1px solid var(--gl);background:var(--mg);color:var(--gl);font-size:1.4rem;cursor:pointer;display:none}
-#mu.show{display:block}#mu.on{animation:sp 4s linear infinite}
+/* #mu{position:fixed;right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:55;width:48px;height:48px;border-radius:50%;border:1px solid var(--gl);background:var(--mg);color:var(--gl);font-size:1.4rem;cursor:pointer;display:none}
+#mu.show{display:block}#mu.on{animation:sp 4s linear infinite} */
+#mu {
+    position: fixed;
+    right: 16px;
+    bottom: 16px;
+
+    /* Tidak memengaruhi ukuran layout halaman */
+    width: 48px;
+    height: 48px;
+    box-sizing: border-box;
+
+    z-index: 55;
+    border-radius: 50%;
+    border: 1px solid var(--gl);
+
+    background: var(--mg);
+    color: var(--gl);
+
+    font-size: 1.4rem;
+    cursor: pointer;
+
+    display: none;
+}
+
 @keyframes sp{to{transform:rotate(360deg)}}
 @media(max-width:700px){.cp,.st{grid-template-columns:1fr}.st{text-align:center;gap:26px}.st:nth-of-type(even) .ph2{order:0}.amp{font-size:3.4rem}section{padding:76px 22px}}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition-duration:.01s!important}}
