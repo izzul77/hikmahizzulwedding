@@ -1,5 +1,5 @@
 var q=new URLSearchParams(location.search).get('to');if(q)document.getElementById('gst').textContent=q;
-var hi=document.getElementById('hv');
+var hi=document.getElementById('hv');document.getElementById('ci').src='assets/img/hero.jpg';
 var au=new Audio('assets/audio/music.mp3');au.loop=true;au.volume=0;au.preload='auto';
 var on=false,mb=document.getElementById('mu'),fd;
 function fade(to){clearInterval(fd);fd=setInterval(function(){var v=au.volume+(to>au.volume?.03:-.03);if(Math.abs(v-to)<.03){v=to;clearInterval(fd);if(!to)au.pause()}au.volume=Math.max(0,Math.min(1,v))},80)}
