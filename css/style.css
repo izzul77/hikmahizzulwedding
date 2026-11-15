@@ -818,3 +818,62 @@ h3 {
         filter: drop-shadow(0 0 30px rgba(217, 188, 132, .55));
     }
 }
+
+
+
+/* SECTION - LEBAR SERAGAM */
+section {
+    position: relative;
+
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+
+    margin: 0;
+    padding: 96px 26px;
+
+    text-align: center;
+    background: var(--bg);
+    color: var(--fg);
+
+    overflow: hidden;
+}
+
+/* INNER CONTENT */
+.w {
+    width: 100%;
+    max-width: 700px;
+    margin-inline: auto;
+    position: relative;
+    z-index: 1;
+}
+
+/* GLOBAL WIDTH FIX */
+html,
+body {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    overflow-x: clip;
+}
+
+/* MOBILE */
+@media (max-width: 700px) {
+    section {
+        width: 100%;
+        max-width: 100%;
+        padding: 76px 22px;
+    }
+
+    .w {
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+/* SMALL MOBILE */
+@media (max-width: 400px) {
+    section {
+        padding: 64px 16px;
+    }
+}
